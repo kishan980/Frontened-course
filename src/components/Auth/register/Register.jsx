@@ -29,7 +29,6 @@ export const Register = () => {
   const [name, setName] = useState('');
   const [imagePrev, setImagePrev] = useState('');
   const [image, setImage] = useState('')
-  console.log("🚀 ~ file: Register.jsx:32 ~ Register ~ image", image)
 
   const changeImageHandler = e => {
     const file = e.target.files[0];
