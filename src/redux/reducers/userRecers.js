@@ -27,7 +27,7 @@ export const userReducer = createReducer(
       state.message=action.payload;
     },
     logoutFail:(state,action)=>{
-      state.loading=true;
+      state.loading=false;
       state.isAuthenticated=true;
       state.error=action.payload
     },
