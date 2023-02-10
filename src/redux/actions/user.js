@@ -5,7 +5,7 @@ import {server} from "../store";
 export const login = (email,password) => async(dispatch) =>{
     try{
         dispatch({type:"loginRequest"});
-        const {data} = await axios.post(`http://localhost:4000/api/v2/login`, {email,password},{
+        const {data} = await axios.post(`${server}/login`, {email,password},{
             headers:{
                 "Content-Type":"application/json" 
             },
@@ -22,7 +22,7 @@ export const login = (email,password) => async(dispatch) =>{
 export const myProfile = ()=>async(dispatch) =>{
     try{
         dispatch({type:"loadUserRequest"})
-        const {data} = await axios.get('http://localhost:4000/api/v2/me',{
+        const {data} = await axios.get(`${server}/me`,{
             headers:{
                 "Content-Type":"application/json"
             },
@@ -38,10 +38,11 @@ export const myProfile = ()=>async(dispatch) =>{
 export const logout = () =>async(dispatch)=>{
     try{
         dispatch({type:"logoutRequest"})
-        const {data}= await axios.post('http://localhost:4000/api/v2/logout', {
+        const {data}= await axios.post(`${server}/logout`, {
             headers:{
                 "Content-Type":"application/json"
-            }
+            },
+            withCredentials:true
         })
         console.log(data)
         dispatch({type:"logoutSuccess", payload:data.message})

@@ -23,7 +23,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import study from '../../assets/images/study.jpg';
 import { fileUploadCss } from './../Auth/register/Register';
-
+// tuje abhi chye kya ?haaaaaaa bas me ker key api hai oo coll karu ga yaha p
 const user = {
   name: 'kishan yadav',
   email: 'kishany980@gmail.com',

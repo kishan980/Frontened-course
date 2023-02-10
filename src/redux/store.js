@@ -8,4 +8,4 @@ const store = configureStore({
 })
 
 export default store;
-export const server = "localhost:4000/api/v2";
+export const server = "https://node-test-liu0.onrender.com/api/v2";

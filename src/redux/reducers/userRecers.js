@@ -22,7 +22,7 @@ export const userReducer = createReducer(
     },
     logoutSuccess:(state,action) =>{
       state.loading =false;
-      state.isAuthenticated=true;
+      state.isAuthenticated=false;
       state.user=null;
       state.message=action.payload;
     },
