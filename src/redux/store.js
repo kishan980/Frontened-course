@@ -8,4 +8,4 @@ const store = configureStore({
 })
 
 export default store;
-export const server = "https://node-test-liu0.onrender.com";
+export const server = "https://node-test-bafi.onrender.com";
